@@ -1,11 +1,15 @@
-# A-Frame Project
+## ❓ What is this
+Various AR Demos
 
-**[Subscribe to the A-Frame newsletter!](https://aframe.io/subscribe/)**
+## Tech used
+* [a-frame](https://aframe.io/)
+* [MindAR](https://hiukim.github.io/mind-ar-js-doc/)
 
-**[Sponsor us to help support A-Frame development and its community](https://github.com/sponsors/dmarcos)**
+## Demos
+### [Basic Interaction](https://wandwand-mindar.glitch.me/)
+* 🍉 Image Tracking
+* 🍉 Raycasting and a click-event
+* 🍉 MindAR scanning-overlay reappears after target is lost
+* 🍉 custom developer tools
 
-Built with [A-Frame](https://aframe.io), a web framework for building virtual reality experiences.
-
-Make WebVR with HTML and Entity-Component. Works on Vive, Rift, Quest, desktop, mobile platforms.
-
-Click and drag on desktop. Open it on a smartphone and use the device motion sensors. Or [plug in a VR headset](https://aframe.io/docs/0.8.0/introduction/vr-headsets-and-webvr-browsers.html)!
+To use this as a template compile your own image. [Learn how to do this in the official MindAR docs!](https://hiukim.github.io/mind-ar-js-doc/quick-start/overview) 
