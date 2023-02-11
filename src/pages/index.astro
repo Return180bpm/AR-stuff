@@ -1,0 +1,28 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro"
+import Header from "../components/Header.astro"
+import Footer from "../components/Footer.astro"
+import DemoCard from "../components/DemoCard.astro"
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts"
+---
+
+<BaseLayout
+    title={SITE_TITLE}
+    description={SITE_DESCRIPTION}
+>
+    <main>
+        <h1>Demos</h1>
+        <ul class="go">
+            <DemoCard
+                title="Click Event simple"
+                description="find tracked image; click"
+                slug="/event-example1"
+            />
+            <DemoCard
+                title="Click Event else"
+                description="find tracked image; click"
+                slug="/event-example2"
+            />
+        </ul>
+    </main>
+</BaseLayout>

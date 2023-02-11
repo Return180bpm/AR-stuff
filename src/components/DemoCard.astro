@@ -1,0 +1,21 @@
+---
+export interface Props {
+    title: string
+    description: string
+    slug: string
+    image?: string
+}
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site)
+
+const {
+    title,
+    description,
+    slug,
+    image = "/placeholder-social.jpg",
+} = Astro.props
+---
+
+<li class="foo">
+    <a href={slug}> {title}</a>
+</li>
