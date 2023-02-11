@@ -14,8 +14,10 @@ const {
     slug,
     image = "/placeholder-social.jpg",
 } = Astro.props
+
+const basedURL = `${import.meta.env.BASE_URL}${slug}`
 ---
 
 <li class="foo">
-    <a href={slug}> {title}</a>
+    <a href={basedURL}> {title}</a>
 </li>
