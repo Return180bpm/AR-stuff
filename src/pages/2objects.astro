@@ -10,13 +10,18 @@
             is:inline
             src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.0/dist/mindar-image-aframe.prod.js"
         ></script>
+        <script
+            is:inline
+            src="https://unpkg.com/aframe-physics-system@1.4.0/dist/aframe-physics-system.min.js"
+        ></script>
     </head>
     <body>
         <a-scene
+            physics
             mindar-image={`imageTargetSrc: ${
                 import.meta.env.BASE_URL
             }art-scroll-bottom-top.mind;`}
-            mindar-image="filterMinCF:0.0008; filterBeta: 1000"
+            mindar-image="filterMinCF: 0.01; filterBeta: 1000;"
             color-space="sRGB"
             renderer="colorManagement: true, physicallyCorrectLights"
             vr-mode-ui="enabled: false"
@@ -40,6 +45,20 @@
                     color="red"
                 ></a-box>
             </a-entity>
+            <a-box
+                position="-1 4 -3"
+                rotation="0 45 0"
+                color="#4CC3D9"
+                dynamic-body
+            ></a-box>
+            <a-plane
+                position="0 0 -4"
+                rotation="-90 0 0"
+                width="4"
+                height="4"
+                color="#7BC8A4"
+                static-body
+            ></a-plane>
         </a-scene>
     </body>
 </html>
