@@ -32,34 +32,40 @@
             src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"
         ></script>
 
-        <script is:inline src="/events.js"></script>
-        <script is:inline src="/devTools.js"></script>
+        <script is:inline src="../scripts/events.js"></script>
+        <script is:inline src="../scripts/devTools.js"></script>
 
         <script>
-            AFRAME.registerComponent("change-color-on-hover", {
-                schema: {
-                    color: { default: "red" },
-                },
-
-                init: function () {
-                    var data = this.data
-                    var el = this.el // <a-box>
-                    var defaultColor = el.getAttribute("material").color
-
-                    el.addEventListener("mouseenter", function () {
-                        el.setAttribute("color", data.color)
-                    })
-
-                    el.addEventListener("mouseleave", function () {
-                        el.setAttribute("color", defaultColor)
-                    })
-
-                    el.addEventListener("click", function () {
-                        el.setAttribute("color", "green")
-                        el.setAttribute("scale", "2 2 0")
-                    })
-                },
+            window.addEventListener("load", event => {
+                app()
             })
+
+            function app() {
+                AFRAME.registerComponent("change-color-on-hover", {
+                    schema: {
+                        color: { default: "red" },
+                    },
+
+                    init: function () {
+                        var data = this.data
+                        var el = this.el // <a-box>
+                        var defaultColor = el.getAttribute("material").color
+
+                        el.addEventListener("mouseenter", function () {
+                            el.setAttribute("color", data.color)
+                        })
+
+                        el.addEventListener("mouseleave", function () {
+                            el.setAttribute("color", defaultColor)
+                        })
+
+                        el.addEventListener("click", function () {
+                            el.setAttribute("color", "green")
+                            el.setAttribute("scale", "2 2 0")
+                        })
+                    },
+                })
+            }
         </script>
 
         <style></style>
